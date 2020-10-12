@@ -1,0 +1,58 @@
+
+.ban {
+  z-index: 99;
+  position: -webkit-sticky;
+  position: fixed;
+  margin-right: 0px;
+  top:0;
+  padding-top: 20px;
+}
+
+.banright {
+  text-align: right;
+  padding-right: 5%;
+  background-color: #fff;
+  margin-top:-20px;
+  border-bottom-left-radius: 100px;
+
+  img{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.banleft {
+  ul {
+    li{
+      text-decoration: none;
+      display: inline-block;
+      margin-right:5%;
+      a{
+        text-decoration: none;
+        color:#fff;
+        font-weight:400;
+        &:hover{
+          color:#000;
+        }
+      }
+    }
+
+  }
+
+}
+.logo {
+  width: 80%;
+}
+
+.caspic {
+  left: 0;
+  right: 0;
+  top:0;
+  position: absolute;
+  z-index: 0;
+
+  img {
+    height: 80vh;
+    object-fit: cover;
+  }
+}
