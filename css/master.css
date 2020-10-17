@@ -33,6 +33,50 @@
   color: #000;
 }
 
+.hamnav {
+  display: none;
+  background-color: #117a8b;
+}
+.hamnav ul {
+  padding-bottom: 10px;
+}
+.hamnav ul li {
+  text-decoration: none;
+  list-style-type: none;
+  padding-bottom: 10px;
+  padding-left: 0px;
+}
+.hamnav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+
+.hamburger {
+  padding-bottom: 25px;
+  display: none;
+  background-color: #117a8b;
+}
+.hamburger a {
+  color: #fff;
+}
+.hamburger .burger i {
+  margin-top: 7px;
+}
+
+@media screen and (max-width: 767px) {
+  .banleft .menu {
+    display: none;
+  }
+
+  .ban {
+    padding-top: 0px !important;
+  }
+
+  .hamburger {
+    display: block !important;
+  }
+}
 .logo {
   width: 80%;
 }

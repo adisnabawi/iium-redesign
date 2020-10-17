@@ -35,9 +35,59 @@
         }
       }
     }
+  }
+}
+.hamnav {
+  display: none;
+  background-color: #117a8b;
+  ul {
+    li{
+      text-decoration: none;
+      list-style-type:none;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      a{
+        text-decoration: none;
+        color:#fff;
+        font-weight:400;
+      }
+    }
+    padding-bottom: 10px;
+  }
+}
+.hamburger {
+  // height: 50px;
+  padding-bottom: 25px;
+  display: none;
+  background-color: #117a8b;
+
+  a{
+    color:#fff;
+  }
+  .burger {
+
+    i {
+        margin-top: 7px;
+    }
 
   }
+}
 
+@media screen and (max-width: 767px) {
+  .banleft {
+    .menu {
+      display: none;
+    }
+  }
+
+  .ban {
+    padding-top: 0px !important;
+  }
+
+
+  .hamburger {
+    display: block !important;
+  }
 }
 .logo {
   width: 80%;
