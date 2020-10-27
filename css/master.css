@@ -77,11 +77,11 @@
 
 #mainmenu {
   position: relative;
-  top: 65vh;
+  margin-top: -100px;
   clear: both;
   text-align: center;
   width: 98%;
-  height: 500px; }
+  height: 300px; }
   #mainmenu .menu {
     float: left;
     width: 18%;
@@ -131,7 +131,6 @@
 #study {
   display: block;
   position: relative;
-  padding-top: 150px;
   margin-left: -15px;
   margin-right: -15px;
   height: 200px; }
@@ -154,23 +153,25 @@
       outline: none;
       border: 0px; }
 
-.mybullet {
-  position: absolute;
-  top: 150px;
-  right: 0;
-  z-index: 1000; }
-  .mybullet .carousel-indicators {
-    position: relative !important;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg); }
-    .mybullet .carousel-indicators li {
-      float: left;
-      border-radius: 50%;
-      height: 10px;
-      width: 17px;
-      display: block; }
+#carousel {
+  height: 80vh; }
+  #carousel .mybullet {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    z-index: 1000; }
+    #carousel .mybullet .carousel-indicators {
+      position: relative !important;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg); }
+      #carousel .mybullet .carousel-indicators li {
+        float: left;
+        border-radius: 50%;
+        height: 10px;
+        width: 17px;
+        display: block; }
 
 /*# sourceMappingURL=master.css.map */
