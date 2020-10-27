@@ -138,6 +138,10 @@
 
 @media screen and (max-width: 930px) {
   #mainmenu {
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -173,7 +177,7 @@
   height: 200px;
 
   .study{
-    background-color: rgb(0 0 0 / 33%);
+    background-color: #dae0e5;
     text-align: center;
     padding-top: 70px;
     padding-bottom:70px;
@@ -193,5 +197,28 @@
       outline: none;
       border: 0px;
     }
+  }
+}
+
+.mybullet {
+    position: absolute;
+    top: 150px;
+    right: 0;
+    z-index: 1000;
+  .carousel-indicators{
+    position: relative !important;
+    -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   transform: rotate(90deg);
+    li {
+      float: left;
+      border-radius: 50%;
+      height: 10px;
+      width: 17px;
+      display: block;
+    }
+
   }
 }
