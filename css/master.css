@@ -59,7 +59,16 @@
     padding-top: 0px !important; }
 
   .hamburger {
-    display: block !important; } }
+    display: block !important; }
+
+  #carousel {
+    margin-top: 50px; }
+
+  #myCarousel {
+    margin-top: 50px; }
+
+  .info .btninfo {
+    width: auto !important; } }
 .logo {
   width: 80%; }
 
@@ -152,6 +161,8 @@
       color: #fff;
       outline: none;
       border: 0px; }
+      #study .study #searchbtn:hover {
+        background-color: #17a2b8ba; }
 
 #carousel {
   height: 80vh; }
@@ -173,5 +184,23 @@
         height: 10px;
         width: 17px;
         display: block; }
+
+.info {
+  margin-top: 50px; }
+  .info .btninfo {
+    width: 100%;
+    margin: 2px; }
+
+#footer {
+  margin-top: 50px;
+  background-color: black;
+  margin-left: -15px;
+  margin-right: -15px; }
+  #footer footer {
+    padding: 50px;
+    color: #fff; }
+    #footer footer li {
+      text-decoration: none;
+      list-style-type: none; }
 
 /*# sourceMappingURL=master.css.map */

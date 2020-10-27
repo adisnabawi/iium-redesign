@@ -88,6 +88,20 @@
   .hamburger {
     display: block !important;
   }
+
+  #carousel {
+    margin-top:50px;
+  }
+
+  #myCarousel {
+    margin-top:50px;
+  }
+
+  .info {
+    .btninfo {
+      width: auto !important;
+    }
+  }
 }
 .logo {
   width: 80%;
@@ -194,6 +208,10 @@
       color:#fff;
       outline: none;
       border: 0px;
+
+      &:hover{
+        background-color: #17a2b8ba;
+      }
     }
   }
 }
@@ -220,6 +238,31 @@
         display: block;
       }
 
+    }
+  }
+}
+
+.info {
+  margin-top: 50px;
+  .btninfo {
+    width: 100%;
+    margin:2px;
+  }
+}
+
+#footer {
+  margin-top:50px;
+  background-color: black;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  footer {
+    padding: 50px;
+    color:#fff;
+
+    li {
+      text-decoration: none;
+      list-style-type: none;
     }
   }
 }

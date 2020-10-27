@@ -1,8 +1,21 @@
 class Banner extends React.Component {
   handleClick = () => {
-    console.log('this is:', this);
+
+    if(this.state.showMenu){
+      $('.hamnav').show();
+      this.state = { showMenu: false };
+    }else {
+      $('.hamnav').hide();
+      this.state = { showMenu: true };
+    }
+
   }
-  
+
+  constructor(props){
+    super(props);
+    this.state = { showMenu: true };
+  }
+
   render() {
     return <div className="ban row">
               <div className="hamburger col-md-12">
