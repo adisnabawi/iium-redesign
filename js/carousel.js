@@ -16,7 +16,7 @@ class Carousel extends React.Component {
                   <img src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                  <img src="https://asia.olympus-imaging.com/content/000107507.jpg" className="d-block w-100" alt="..." />
+                  <img src="https://www.iium.edu.my/imagecache/original/61449/Masthead-Please-wear-mask2.png" className="d-block w-100" alt="..." />
                 </div>
               </div>
             </div>

@@ -40,6 +40,7 @@
 .hamnav {
   display: none;
   background-color: #117a8b;
+  margin-top: -10px;
   ul {
     li{
       text-decoration: none;
@@ -181,6 +182,14 @@
   }
 }
 
+@media screen and (max-width:767px) {
+  .info {
+    .content {
+      padding-top:50px;
+    }
+  }
+}
+
 #study {
   display: block;
   position:relative;
@@ -247,6 +256,28 @@
   .btninfo {
     width: 100%;
     margin:2px;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+    &:hover {
+      color:#117a8b;
+    }
+  }
+
+  .card {
+    img {
+      width:100%;
+      height: 100%;
+      object-fit: cover;
+      margin-left: -15px;
+    }
+  }
+
+  .card-horizontal {
+      display: flex;
+      flex: 1 1 auto;
   }
 }
 

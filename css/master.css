@@ -29,7 +29,8 @@
 
 .hamnav {
   display: none;
-  background-color: #117a8b; }
+  background-color: #117a8b;
+  margin-top: -10px; }
   .hamnav ul {
     padding-bottom: 10px; }
     .hamnav ul li {
@@ -137,6 +138,9 @@
         white-space: pre-wrap; }
         #mainmenu .menu .content p {
           height: 50px; } }
+@media screen and (max-width: 767px) {
+  .info .content {
+    padding-top: 50px; } }
 #study {
   display: block;
   position: relative;
@@ -190,6 +194,19 @@
   .info .btninfo {
     width: 100%;
     margin: 2px; }
+  .info a {
+    color: #000;
+    text-decoration: none; }
+    .info a:hover {
+      color: #117a8b; }
+  .info .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-left: -15px; }
+  .info .card-horizontal {
+    display: flex;
+    flex: 1 1 auto; }
 
 #footer {
   margin-top: 50px;

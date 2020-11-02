@@ -46,8 +46,6 @@ class Banner extends React.Component {
               </div>
             </div>
 
-
-
   }
 }
 
