@@ -11,13 +11,43 @@ class Banner extends React.Component {
 
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenToScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.listenToScroll)
+  }
+
+  listenToScroll = () => {
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop
+
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight
+
+    const scrolled = winScroll / height
+    console.log(scrolled);
+    if(scrolled > 0.07){
+      console.log('green');
+      this.setState({
+        theposition: true,
+      })
+    }else {
+      this.setState({
+        theposition: false,
+      })
+    }
+  }
+
   constructor(props){
     super(props);
-    this.state = { showMenu: true };
+    this.state = { showMenu: true, theposition: false };
   }
 
   render() {
-    return <div className="ban row">
+    return <div className={"ban row " + (this.state.theposition ? 'green' : '')}>
               <div className="hamburger col-md-12">
                 <a className="burger" href="#" onClick={this.handleClick}>
                   <i class="fa fa-bars"></i>
