@@ -3,32 +3,37 @@ class MainMenu extends React.Component {
     return <div className="mainmenu">
               <div className="menu">
                 <div className="content">
-                    <img src="https://www.greengownawards.org/nav/logo.png" />
-                    <p>Green Gown Asia Coordinator</p>
+                  <a href="#">
+                    <img src="img/hb1.png" />
+                  </a>
                   </div>
               </div>
               <div className="menu">
                 <div className="content">
-                    <img src="https://www.iium.edu.my/img/logo-square.png" />
-                    <p>IIUM Regional Centre of Expertise (RCE)</p>
+                  <a href="https://rce2g.iium.edu.my/">
+                    <img src="img/hb2.png" />
+                  </a>
                   </div>
               </div>
               <div className="menu">
                 <div className="content">
-                    <img src="https://www.iium.edu.my/img/logo-square.png" />
-                    <p>Covid-19 Mental Health</p>
+                  <a href="#">
+                    <img src="img/hb3.png" />
+                  </a>
                   </div>
               </div>
               <div className="menu">
                 <div className="content">
-                    <img src="https://www.iium.edu.my/img/logo-square.png" />
-                    <p>IIUM Transformation</p>
+                  <a href="#">
+                    <img src="img/hb4.png" />
+                  </a>
                   </div>
               </div>
               <div className="menu">
                 <div className="content">
-                    <img src="https://www.iium.edu.my/img/logo-square.png" />
-                    <p>Campus Life</p>
+                  <a href="#">
+                    <img src="img/hb5.png" />
+                  </a>
                   </div>
               </div>
             </div>

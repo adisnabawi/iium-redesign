@@ -40,6 +40,10 @@ class Menu extends React.Component {
         return(<News news={this.state.news}/>);
       case 'events':
         return(<Events />);
+      case 'announcement':
+        return(<Announcement />);
+      case 'staff':
+        return(<Staff />);
       default:
         break;
     }
@@ -50,13 +54,13 @@ class Menu extends React.Component {
     return <div className="info container">
               <div className="row">
                 <div className="col-md-3">
-                   <button className="btn btn-dark btninfo" onClick={this.handleClick('news')}>News</button>
-                   <button className="btn btn-dark btninfo" onClick={this.handleClick('events')}>Events</button>
-                   <button className="btn btn-dark btninfo">Announcement</button>
-                   <button className="btn btn-dark btninfo">Staff</button>
-                   <button className="btn btn-dark btninfo">Students</button>
-                   <button className="btn btn-dark btninfo">Events</button>
-                   <button className="btn btn-dark btninfo">Research</button>
+                   <button className="btn btn-iium btninfo" onClick={this.handleClick('news')}>News</button>
+                   <button className="btn btn-iium btninfo" onClick={this.handleClick('events')}>Events</button>
+                   <button className="btn btn-iium btninfo" onClick={this.handleClick('announcement')}>Announcement</button>
+                   <button className="btn btn-iium btninfo" onClick={this.handleClick('staff')}>Staff</button>
+                   <button className="btn btn-iium btninfo">Students</button>
+                   <button className="btn btn-iium btninfo">International Students</button>
+                   <button className="btn btn-iium btninfo">Research</button>
                 </div>
                <div className="col-md-9 content">
                 {this.renderSwitch(this.state.showMenu)}
@@ -68,11 +72,11 @@ class Menu extends React.Component {
 class News extends React.Component {
   render() {
       return <div className="news">
-              <div className="col-md-6">
+              <div className="col-md-8">
                 <h4>Featured News</h4>
                 <div className="row">
                 {this.props.news.map(item => (
-                <div class="col-12 mt-3" key={item.id}>
+                <div class="col-12" key={item.id}>
                 <a href={item.link}>
                   <div className="card">
                           <div className="card-horizontal">
@@ -87,6 +91,7 @@ class News extends React.Component {
                               <small className="text-muted">Published on {item.publishedAt}</small>
                           </div>
                       </div>
+                      <br />
                       </a>
                   </div>
                 ))}
@@ -99,7 +104,29 @@ class News extends React.Component {
 class Events extends React.Component {
   render() {
     return <div className="events">
-            2143143kndmakldmlk
+            <div className="col-md-8">
+              <h4>Events</h4>
+            </div>
+          </div>
+  }
+}
+
+class Announcement extends React.Component {
+  render() {
+    return <div className="announcement">
+            <div className="col-md-8">
+              <h4>Announcement</h4>
+            </div>
+          </div>
+  }
+}
+
+class Staff extends React.Component {
+  render() {
+    return <div className="staff">
+            <div className="col-md-8">
+              <h4>Staff</h4>
+            </div>
           </div>
   }
 }
