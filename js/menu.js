@@ -102,9 +102,14 @@ class News extends React.Component {
                 )}
                 </div>
                 <div className="col-md-4">
+                <video className="iiumvid" controls preload="true" muted autostart="false">
+                <source src="https://photos.iium.edu.my/vidz/highlightvideo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <br /> <br />
                 {this.props.news.map((item, i) => {
                   if(i > 2 && i < 8) {
-                  return( <div class="col-12" key={item.id}>
+                  return( <div key={item.id}>
                     <a href={item.link}>
                       <div className="card">
                               <div className="card-horizontal">
