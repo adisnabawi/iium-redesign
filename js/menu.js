@@ -73,13 +73,12 @@ class Menu extends React.Component {
 class News extends React.Component {
   render() {
       return <div className="news">
-
-                <div className="col-md-12"><h4>Latest News</h4></div>
+                <div className="newsTitle"><h4>Latest News</h4></div>
                 <div className="row">
                 <div className="col-md-8">
                 {this.props.news.map((item, i) => {
                   if(i < 3) {
-                  return( <div class="col-12" key={item.id}>
+                  return( <div className="latestNews" key={item.id}>
                     <a href={item.link}>
                       <div className="card">
                               <div className="card-horizontal">
