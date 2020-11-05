@@ -35,6 +35,7 @@
   background-color: #117a8b;
   margin-top: -10px; }
   .hamnav ul {
+    margin-left: -40px;
     padding-bottom: 10px; }
     .hamnav ul li {
       text-decoration: none;
@@ -45,6 +46,10 @@
         text-decoration: none;
         color: #fff;
         font-weight: 400; }
+        .hamnav ul li a:hover {
+          color: #000; }
+        .hamnav ul li a:active {
+          color: #000; }
 
 .hamburger {
   padding-bottom: 25px;
@@ -141,7 +146,11 @@
           height: 50px; } }
 @media screen and (max-width: 767px) {
   .info .content {
-    padding-top: 50px; } }
+    padding-top: 50px; }
+
+  .caspic img {
+    object-fit: contain !important;
+    background-color: #212529; } }
 #study {
   display: block;
   position: relative;
@@ -198,14 +207,15 @@
   margin-top: 50px; }
   .info .btninfo {
     width: 100%;
-    margin: 2px; }
+    margin: 2px;
+    margin-bottom: 5px; }
   .info a {
     color: #000;
     text-decoration: none; }
     .info a:hover {
       color: #117a8b; }
   .info .btn-iium {
-    border-radius: 10px;
+    border-radius: 20px;
     border: 2px solid #117a8b; }
     .info .btn-iium:hover {
       color: #fff;

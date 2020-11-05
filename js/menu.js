@@ -23,6 +23,7 @@ class Menu extends React.Component {
             news: result
           });
           console.log(this.state.news);
+
         },
         (error) => {
           this.setState({
@@ -72,29 +73,53 @@ class Menu extends React.Component {
 class News extends React.Component {
   render() {
       return <div className="news">
-              <div className="col-md-8">
-                <h4>Featured News</h4>
+
+                <div className="col-md-12"><h4>Latest News</h4></div>
                 <div className="row">
-                {this.props.news.map(item => (
-                <div class="col-12" key={item.id}>
-                <a href={item.link}>
-                  <div className="card">
-                          <div className="card-horizontal">
-                              <div className="img-square-wrapper col-md-5">
-                                  <img src={item.url} alt={item.title} />
+                <div className="col-md-8">
+                {this.props.news.map((item, i) => {
+                  if(i < 3) {
+                  return( <div class="col-12" key={item.id}>
+                    <a href={item.link}>
+                      <div className="card">
+                              <div className="card-horizontal">
+                                  <div className="img-square-wrapper col-md-5">
+                                      <img src={item.url} alt={item.title} />
+                                  </div>
+                                  <div className="card-body col-md-7">
+                                      <h5 className="card-title">{item.title}</h5>
+                                  </div>
                               </div>
-                              <div className="card-body col-md-7">
-                                  <h5 className="card-title">{item.title}</h5>
+                              <div className="card-footer">
+                                  <small className="text-muted">Published on { moment(item.publishedAt).format('MMM Do YYYY')}</small>
                               </div>
                           </div>
-                          <div className="card-footer">
-                              <small className="text-muted">Published on {item.publishedAt}</small>
-                          </div>
+                          <br />
+                          </a>
                       </div>
-                      <br />
-                      </a>
-                  </div>
-                ))}
+                  )}
+                }
+                )}
+                </div>
+                <div className="col-md-4">
+                {this.props.news.map((item, i) => {
+                  if(i > 2 && i < 8) {
+                  return( <div class="col-12" key={item.id}>
+                    <a href={item.link}>
+                      <div className="card">
+                              <div className="card-horizontal">
+                                  <div className="card-body">
+                                      <small>{item.title}</small> <br />
+                                      <small className="text-muted">Published on { moment(item.publishedAt).format('MMM Do YYYY')}</small>
+                                  </div>
+                              </div>
+                          </div>
+                          <br />
+                          </a>
+                      </div>
+                  )}
+                }
+                )}
                 </div>
               </div>
             </div>
