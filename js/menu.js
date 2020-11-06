@@ -73,7 +73,15 @@ class Menu extends React.Component {
 class News extends React.Component {
   render() {
       return <div className="news">
-                <div className="newsTitle"><h4>Latest News</h4></div>
+                <div className="row">
+                  <div className="col-sm-8 newsTitle"><h4>Latest News</h4></div>
+                  <div className="col-sm-4 newsMore text-right">
+                    <a href="https://www.iium.edu.my/news">
+                      More News <i class="fa fa-angle-double-right"></i>
+                    </a>
+                  </div>
+                </div>
+                <br />
                 <div className="row">
                 <div className="col-md-8">
                 {this.props.news.map((item, i) => {
@@ -87,9 +95,10 @@ class News extends React.Component {
                                   </div>
                                   <div className="card-body col-md-7">
                                       <h5 className="card-title">{item.title}</h5>
+                                      <hr className="iium-line iu-left"></hr>
                                   </div>
                               </div>
-                              <div className="card-footer">
+                              <div className="card-footer iium-card-footer">
                                   <small className="text-muted">Published on { moment(item.publishedAt).format('MMM Do YYYY')}</small>
                               </div>
                           </div>

@@ -7,6 +7,7 @@ class Footer extends React.Component {
                   <p>
                   International Islamic University Malaysia <br />
                   P.O. Box 10, 50728 Kuala Lumpur <br />
+                  <hr className="iium-line iu-left" />
                   <br />
                   Phone : (+603) 6421 6421 <br />
                   Fax : (+603) 6421 4053 <br />

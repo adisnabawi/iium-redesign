@@ -3,10 +3,10 @@ class Banner extends React.Component {
 
     if(this.state.showMenu){
       $('.hamnav').show();
-      this.state = { showMenu: false };
+      this.setState({ showMenu: false });
     }else {
       $('.hamnav').hide();
-      this.state = { showMenu: true };
+      this.setState({ showMenu: true });
     }
 
   }
@@ -28,9 +28,7 @@ class Banner extends React.Component {
       document.documentElement.clientHeight
 
     const scrolled = winScroll / height
-    console.log(scrolled);
     if(scrolled > 0.07){
-      console.log('green');
       this.setState({
         theposition: true,
       })
@@ -50,7 +48,7 @@ class Banner extends React.Component {
     return <div className={"ban row " + (this.state.theposition ? 'green' : '')}>
               <div className="hamburger col-md-12">
                 <a className="burger" href="#" onClick={this.handleClick}>
-                  <i class="fa fa-bars"></i>
+                <i class={"fa fa-" + (this.state.showMenu ? "bars" : "times")}></i>
                 </a>
               </div>
               <div className="col-md-12 hamnav">

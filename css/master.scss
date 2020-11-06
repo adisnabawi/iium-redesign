@@ -157,6 +157,10 @@
         padding-bottom: 10px;
         height: 100%;
         object-fit: contain;
+
+        &:hover {
+
+        }
       }
     }
   }
@@ -315,6 +319,25 @@
   .card-horizontal {
       display: flex;
       flex: 1 1 auto;
+  }
+}
+
+.iium-card-footer {
+  background-color: #357a8b;
+  color:#fff;
+
+  .text-muted {
+    color:#fff !important;
+  }
+}
+
+.iium-line {
+  height:5px;
+  width: 70px;
+  background-color: #ba8740;
+  margin-top:0px;
+  &.iu-left {
+    float: left;
   }
 }
 
