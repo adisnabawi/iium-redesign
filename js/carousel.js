@@ -1,23 +1,55 @@
 class Carousel extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = { banner: [] };
+  }
+
+  componentDidMount() {
+    fetch("https://my.iium.edu.my/iiummobile/banner.php")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            banner: result
+          });
+          console.log(this.state.banner);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      )
+  }
   render() {
     return <div id="myCarousel" className="carousel slide caspic" data-ride="carousel">
               <div className="mybullet">
                 <ol className="bullets carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  {this.state.banner.map((item, i) => {
+                      if(i == 0) {
+                        return( <li data-target="#myCarousel" data-slide-to="0" className="active casbor"></li>)
+                      }else {
+                        return( <li data-target="#myCarousel" data-slide-to={i} className="casbor"></li>)
+                      }
+                    })
+                  }
                 </ol>
               </div>
+
               <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <img src="https://asia.olympus-imaging.com/content/000107507.jpg" className="d-block w-100" alt="..." />
-                </div>
-                <div className="carousel-item">
-                  <img src="https://imaging.nikon.com/lineup/dslr/df/img/sample/img_01.jpg" className="d-block w-100" alt="..." />
-                </div>
-                <div className="carousel-item">
-                  <img src="https://www.iium.edu.my/imagecache/original/61449/Masthead-Please-wear-mask2.png" className="d-block w-100" alt="..." />
-                </div>
+                {this.state.banner.map((item, i) => {
+                    if(i == 0) {
+                      return( <div className="carousel-item active" key={item.id}>
+                          <img src={item.url} className="d-block w-100" alt="..." />
+                      </div>)
+                    }else {
+                      return( <div className="carousel-item" key={item.id}>
+                        <img src={item.url} className="d-block w-100" alt="..." />
+                      </div>)
+                    }
+                  })
+                }
               </div>
             </div>
   }
