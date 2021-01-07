@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "url": "https://www.iium.edu.my/imagecache/medium/30735/request%20eMail.jpg",
+    "thumbnail": "https://www.iium.edu.my/imagecache/medium/30735/request%20eMail.jpg",
+    "title": "Email Request System",
+    "content": "Requesting email account for staff",
+    "link": "https://apex.iium.edu.my:8443/staff/sso/reg/",
+    "publishedAt": "2021-01-06 18:26:31"
+  },
+  {
+    "id": "2",
+    "url": "https://www.iium.edu.my/imagecache/medium/22307/IIUM%20HURIS.png",
+    "thumbnail": "https://www.iium.edu.my/imagecache/medium/22307/IIUM%20HURIS.png",
+    "title": "Human Resources Information System",
+    "content": "Access to IIUM staff information system",
+    "link": "https://huris.iium.edu.my/online/",
+    "publishedAt": "2021-01-06 18:26:31"
+  }
+]
