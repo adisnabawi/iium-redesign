@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "url": "https://www.iium.edu.my/imagecache/medium/22315/IIUM%20IREP.png",
+    "thumbnail": "https://www.iium.edu.my/imagecache/medium/22315/IIUM%20IREP.png",
+    "title": "IIUM Repository",
+    "content": "IIUM Research Repository",
+    "link": "http://irep.iium.edu.my/cgi/latest",
+    "publishedAt": "2021-01-06 18:26:31"
+  },
+  {
+    "id": "2",
+    "url": "https://www.iium.edu.my/imagecache/medium/22309/IIUM%20Mail.png",
+    "thumbnail": "https://www.iium.edu.my/imagecache/medium/22309/IIUM%20Mail.png",
+    "title": "IIUM Email by Google",
+    "content": "Access your IIUM email provided by Google.",
+    "link": "https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+    "publishedAt": "2021-01-06 18:26:31"
+  },
+  {
+    "id": "3",
+    "url": "https://www.iium.edu.my/imagecache/medium/17058/rms2.PNG",
+    "thumbnail": "https://www.iium.edu.my/imagecache/medium/17058/rms2.PNG",
+    "title": "Research Management System",
+    "content": "Manage everything about your research project here",
+    "link": "https://rmsv2.iium.edu.my/auth/logint",
+    "publishedAt": "2021-01-06 18:26:31"
+  },
+  {
+    "id": "4",
+    "url": "https://www.iium.edu.my/imagecache/medium/15470/photogrid.png",
+    "thumbnail": "https://www.iium.edu.my/imagecache/medium/15470/photogrid.png",
+    "title": "IIUM Expert Directory in PlumX",
+    "content": "PlumX is a product that delivers a more complete picture of research and answers questions.",
+    "link": "https://plu.mx/iium/g/eprints/divisions",
+    "publishedAt": "2021-01-06 18:26:31"
+  }
+]

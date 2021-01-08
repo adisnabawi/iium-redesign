@@ -280,6 +280,10 @@
   color: #fff;
   background-color: #117a8b;
 }
+.info .btn-active {
+  background-color: #117a8b;
+  color: #fff;
+}
 .info .card img {
   width: 100%;
   height: 100%;

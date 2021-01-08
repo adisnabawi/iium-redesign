@@ -10,7 +10,10 @@ class Menu extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.renderSwitch = this.renderSwitch.bind(this);
-    this.state = { error: null, showMenu: 'news', isLoaded: false, news: [], iiumevents: [], announcement: [], staff:[] };
+    this.state = { error: null, showMenu: 'news', isLoaded: false, news: [],
+                   iiumevents: [], announcement: [], staff:[], student:[],
+                   alumni:[], research:[]
+                 };
   }
 
   componentDidMount() {
@@ -32,56 +35,107 @@ class Menu extends React.Component {
         }
       );
 
-      fetch("https://my.iium.edu.my/iiummobile/events.php?token=adis")
-        .then(res => res.json())
-        .then(
-          (result) => {
-            this.setState({
-              iiumevents: result
-            });
-            console.log(this.state.iiumevents);
+    fetch("https://my.iium.edu.my/iiummobile/events.php?token=adis")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            iiumevents: result
+          });
+          console.log(this.state.iiumevents);
 
-          },
-          (error) => {
-            this.setState({
-              error
-            });
-          }
-        );
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
 
-        fetch("https://my.iium.edu.my/iiummobile/announcement.php?token=adis")
-          .then(res => res.json())
-          .then(
-            (result) => {
-              this.setState({
-                announcement: result
-              });
-              console.log(this.state.announcement);
+    fetch("https://my.iium.edu.my/iiummobile/announcement.php?token=adis")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            announcement: result
+          });
+          console.log(this.state.announcement);
 
-            },
-            (error) => {
-              this.setState({
-                error
-              });
-            }
-          );
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
 
-          fetch("/json/staff.json")
-            .then(res => res.json())
-            .then(
-              (result) => {
-                this.setState({
-                  staff: result
-                });
-                console.log(this.state.staff);
+    fetch("/json/student.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            student: result
+          });
+          console.log(this.state.student);
 
-              },
-              (error) => {
-                this.setState({
-                  error
-                });
-              }
-            );
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
+
+    fetch("/json/staff.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            staff: result
+          });
+          console.log(this.state.staff);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
+
+    fetch("/json/alumni.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            alumni: result
+          });
+          console.log(this.state.alumni);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
+
+    fetch("/json/research.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            research: result
+          });
+          console.log(this.state.research);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
 
   }
 
@@ -97,6 +151,12 @@ class Menu extends React.Component {
         return(<Announcement announcement={this.state.announcement} />);
       case 'staff':
         return(<Staff staff={this.state.staff}/>);
+      case 'student':
+        return(<Student student={this.state.student}/>);
+      case 'alumni':
+        return(<Alumni alumni={this.state.alumni}/>);
+      case 'research':
+        return(<Research research={this.state.research}/>);
       default:
         break;
     }
@@ -107,13 +167,13 @@ class Menu extends React.Component {
     return <div className="info container">
               <div className="row">
                 <div className="col-md-3">
-                   <button className="btn btn-iium btninfo" onClick={this.handleClick('news')}>News</button>
-                   <button className="btn btn-iium btninfo" onClick={this.handleClick('events')}>Events</button>
-                   <button className="btn btn-iium btninfo" onClick={this.handleClick('announcement')}>Announcement</button>
-                   <button className="btn btn-iium btninfo" onClick={this.handleClick('staff')}>Staff</button>
-                   <button className="btn btn-iium btninfo">Students</button>
-                   <button className="btn btn-iium btninfo">Alumni</button>
-                   <button className="btn btn-iium btninfo">Research</button>
+                   <button className={this.state.showMenu == 'news' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('news')}>News</button>
+                   <button className={this.state.showMenu == 'events' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('events')}>Events</button>
+                   <button className={this.state.showMenu == 'announcement' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('announcement')}>Announcement</button>
+                   <button className={this.state.showMenu == 'staff' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('staff')}>Staff</button>
+                   <button className={this.state.showMenu == 'student' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('student')}>Students</button>
+                   <button className={this.state.showMenu == 'alumni' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('alumni')}>Alumni</button>
+                   <button className={this.state.showMenu == 'research' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('research')}>Research</button>
                 </div>
                <div className="col-md-9 content">
                 {this.renderSwitch(this.state.showMenu)}
@@ -294,6 +354,120 @@ class Staff extends React.Component {
   }
 }
 
+class Student extends React.Component {
+  render() {
+    return <div className="staff">
+              <div className="row">
+                <div className="col-sm-8 newsTitle"><h4>Students</h4></div>
+                  <div className="col-sm-4 newsMore text-right">
+                  </div>
+              </div>
+              <div className="row">
+
+              {this.props.student.map((item, i) => {
+                return( <div className="col-md-6">
+                <div className="latestNews" key={item.id}>
+                  <a href={item.link}>
+                    <div className="card">
+                            <div className="card-horizontal">
+                                <div className="img-square-wrapper col-md-5">
+                                    <img src={item.url} alt={item.title} />
+                                </div>
+                                <div className="card-body col-md-7">
+                                    <h5 className="card-title">{item.title}</h5>
+                                    <hr className="iium-line iu-left"></hr>
+                                    <br />
+                                    <p>{ item.content }</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        </a>
+                    </div>
+                  </div>
+                )}
+              )}
+              </div>
+            </div>
+  }
+}
+
+class Alumni extends React.Component {
+  render() {
+    return <div className="staff">
+              <div className="row">
+                <div className="col-sm-8 newsTitle"><h4>Alumni</h4></div>
+                  <div className="col-sm-4 newsMore text-right">
+                  </div>
+              </div>
+              <div className="row">
+
+              {this.props.alumni.map((item, i) => {
+                return( <div className="col-md-6">
+                <div className="latestNews" key={item.id}>
+                  <a href={item.link}>
+                    <div className="card">
+                            <div className="card-horizontal">
+                                <div className="img-square-wrapper col-md-5">
+                                    <img src={item.url} alt={item.title} />
+                                </div>
+                                <div className="card-body col-md-7">
+                                    <h5 className="card-title">{item.title}</h5>
+                                    <hr className="iium-line iu-left"></hr>
+                                    <br />
+                                    <p>{ item.content }</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        </a>
+                    </div>
+                  </div>
+                )}
+              )}
+              </div>
+            </div>
+  }
+}
+
+class Research extends React.Component {
+  render() {
+    return <div className="staff">
+              <div className="row">
+                <div className="col-sm-8 newsTitle"><h4>Research</h4></div>
+                  <div className="col-sm-4 newsMore text-right">
+                  </div>
+              </div>
+              <div className="row">
+
+              {this.props.research.map((item, i) => {
+                return( <div className="col-md-6">
+                <div className="latestNews" key={item.id}>
+                  <a href={item.link}>
+                    <div className="card">
+                            <div className="card-horizontal">
+                                <div className="img-square-wrapper col-md-5">
+                                    <img src={item.url} alt={item.title} />
+                                </div>
+                                <div className="card-body col-md-7">
+                                    <h5 className="card-title">{item.title}</h5>
+                                    <hr className="iium-line iu-left"></hr>
+                                    <br />
+                                    <p>{ item.content }</p>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        </a>
+                    </div>
+                  </div>
+                )}
+              )}
+              </div>
+            </div>
+  }
+}
+
 class Events extends React.Component {
   render() {
       return <div className="events">
@@ -347,7 +521,7 @@ class Events extends React.Component {
                                       <small>{item.title}</small> <br />
                                       <small>{ moment(item.start_date).format('MMM Do YYYY')} -
                                       { moment(item.end_date).format('MMM Do YYYY')}</small> <br />
-                                      <small className="text-muted">Location { item.location }</small>
+                                      <small className="text-muted">Location: { item.location }</small>
                                   </div>
                               </div>
                           </div>
