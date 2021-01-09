@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "url": "http://imaluum.iium.edu.my/",
+    "title": "i-Ma'luum"
+  },
+  {
+    "id": "2",
+    "url": "http://www.iium.edu.my/division/amad/datescalendar",
+    "title": "Academic Calendars"
+  },
+  {
+    "id": "3",
+    "url": "http://www.iium.edu.my/page/Students-Resources",
+    "title": "Student Resources"
+  },
+  {
+    "id": "4",
+    "url": "https://epayment.iium.edu.my/",
+    "title": "E-Payment"
+  },
+  {
+    "id": "5",
+    "url": "http://www.iium.edu.my/page/scholarship-and-financial-assistance",
+    "title": "Scholarship & Financial Assistance"
+  }
+]

@@ -327,5 +327,16 @@
   text-decoration: none;
   list-style-type: none;
 }
+#footer .listFooter {
+  list-style-type: none;
+  margin-left: -40px;
+}
+#footer .listFooter li a {
+  text-decoration: none;
+  color: #fff;
+}
+#footer .listFooter li a:hover {
+  color: #117a8b;
+}
 
 /*# sourceMappingURL=master.css.map */

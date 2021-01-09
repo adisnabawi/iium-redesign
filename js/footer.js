@@ -1,4 +1,30 @@
 class Footer extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+                  footer1:[]
+                 };
+  }
+
+  componentDidMount() {
+    fetch("/json/footer/student_parent.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            footer1: result
+          });
+          console.log(this.state.footer1);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
+  }
   render() {
     return <div className="footer">
             <footer>
@@ -15,10 +41,12 @@ class Footer extends React.Component {
                   </p>
                 </div>
                 <div className="col-md-3">
-                   <ul>
-                    <li>Test 1 </li>
-                    <li>Test 2 </li>
-                    <li>Test 3 </li>
+                  <p><b>Students & Parents</b></p>
+                   <ul className="listFooter">
+                   {this.state.footer1.map((item, i) => {
+                     return( <li><a href={item.url}> {item.title} </a> </li>
+                     )}
+                   )}
                    </ul>
                 </div>
                <div className="col-md-3">

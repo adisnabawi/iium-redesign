@@ -365,4 +365,20 @@
       list-style-type: none;
     }
   }
+
+  .listFooter {
+    list-style-type: none;
+    margin-left: -40px;
+
+    li {
+      a {
+        text-decoration: none;
+        color:#fff;
+
+        &:hover {
+          color:#117a8b;
+        }
+      }
+    }
+  }
 }
