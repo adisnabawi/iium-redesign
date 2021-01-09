@@ -191,6 +191,18 @@
     object-fit: contain !important;
     background-color: #212529;
   }
+
+  .mybullet {
+    top: 380px !important;
+  }
+  .mybullet .carousel-indicators {
+    position: relative !important;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg) !important;
+  }
 }
 #study {
   display: block;
@@ -235,7 +247,8 @@
 #carousel .mybullet {
   position: absolute;
   top: 220px;
-  right: -70px;
+  right: 0px;
+  width: 200px;
   z-index: 1000;
 }
 #carousel .mybullet .carousel-indicators {
@@ -250,7 +263,6 @@
   float: left;
   border-radius: 50%;
   height: 10px;
-  width: 17px;
   display: block;
 }
 
@@ -337,6 +349,25 @@
 }
 #footer .listFooter li a:hover {
   color: #117a8b;
+}
+
+@media screen and (orientation: landscape) {
+  #carousel {
+    height: 500px !important;
+  }
+
+  .caspic img {
+    height: 500px;
+  }
+
+  .carousel-indicators {
+    position: relative !important;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg) !important;
+  }
 }
 
 /*# sourceMappingURL=master.css.map */

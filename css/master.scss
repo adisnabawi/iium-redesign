@@ -201,7 +201,7 @@
   }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:767px){
   .info {
     .content {
       padding-top:50px;
@@ -212,6 +212,19 @@
     img {
       object-fit: contain !important;
       background-color: #212529;
+    }
+  }
+
+  .mybullet {
+    top: 380px !important;
+
+    .carousel-indicators{
+      position: relative !important;
+      -webkit-transform: rotate(0deg);
+     -moz-transform: rotate(0deg);
+     -ms-transform: rotate(0deg);
+     -o-transform: rotate(0deg);
+     transform: rotate(0deg) !important;
     }
   }
 }
@@ -260,7 +273,8 @@
   .mybullet {
       position: absolute;
       top: 220px;
-      right: -70px;
+      right: 0px;
+      width:200px;
       z-index: 1000;
     .carousel-indicators{
       position: relative !important;
@@ -273,7 +287,6 @@
         float: left;
         border-radius: 50%;
         height: 10px;
-        width: 17px;
         display: block;
       }
 
@@ -381,4 +394,24 @@
       }
     }
   }
+}
+
+@media screen and (orientation:landscape) {
+
+  #carousel {
+    height: 500px !important;
+  }
+  .caspic img {
+    height: 500px;
+  }
+
+  .carousel-indicators{
+    position: relative !important;
+    -webkit-transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -ms-transform: rotate(90deg);
+   -o-transform: rotate(90deg);
+   transform: rotate(90deg) !important;
+  }
+
 }
