@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "url": "/img/banner1.png",
+    "title": "Banner 1"
+  },
+  {
+    "id": "2",
+    "url": "/img/banner2.png",
+    "title": "Banner 2"
+  }
+]

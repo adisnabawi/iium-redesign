@@ -262,7 +262,8 @@
 #carousel .mybullet .carousel-indicators li {
   float: left;
   border-radius: 50%;
-  height: 10px;
+  height: 13px;
+  width: 13px;
   display: block;
 }
 
@@ -353,11 +354,11 @@
 
 @media screen and (orientation: landscape) {
   #carousel {
-    height: 500px !important;
+    height: 530px !important;
   }
 
   .caspic img {
-    height: 500px;
+    height: 530px;
   }
 
   .carousel-indicators {

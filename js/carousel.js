@@ -5,7 +5,7 @@ class Carousel extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://my.iium.edu.my/iiummobile/banner.php")
+    fetch("/json/banner.json")
       .then(res => res.json())
       .then(
         (result) => {
@@ -41,11 +41,11 @@ class Carousel extends React.Component {
                 {this.state.banner.map((item, i) => {
                     if(i == 0) {
                       return( <div className="carousel-item active" key={item.id}>
-                          <img src={item.url} className="d-block w-100" alt="..." />
+                          <img src={item.url} className="d-block w-100" alt={item.title} />
                       </div>)
                     }else {
                       return( <div className="carousel-item" key={item.id}>
-                        <img src={item.url} className="d-block w-100" alt="..." />
+                        <img src={item.url} className="d-block w-100" alt={item.title} />
                       </div>)
                     }
                   })
