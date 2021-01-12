@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "url": "http://iium.edu.my/centre/rmc/",
+    "title": "Research Centre"
+  },
+  {
+    "id": "2",
+    "url": "http://www.iium.edu.my/division/lib",
+    "title": "Library"
+  },
+  {
+    "id": "3",
+    "url": "http://www.lib.iium.edu.my/elmu-rm/mom2-documentsearch.jsp",
+    "title": "Thesis, Journal & Papers"
+  },
+  {
+    "id": "4",
+    "url": "http://www.iium.edu.my/staff/search?name=&expertise=&kcdio=&role=ACADEMIC",
+    "title": "List of Expertise"
+  },
+  {
+    "id": "5",
+    "url": "http://irep.iium.edu.my/cgi/latest",
+    "title": "IIUM Repository"
+  },
+  {
+    "id": "6",
+    "url": "https://bookshop.iium.edu.my/",
+    "title": "E-Bookstore"
+  },
+  {
+    "id": "9",
+    "url": "https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin",
+    "title": "Staff Email"
+  },
+  {
+    "id": "10",
+    "url": "https://italeem.iium.edu.my/",
+    "title": "iTa'LeEM"
+  }
+]
