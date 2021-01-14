@@ -266,13 +266,17 @@ class Announcement extends React.Component {
               <div className="row">
               <div className="col-md-8">
               {this.props.announcement.map((item, i) => {
+                var url = item.url;
+                if(url.includes(".pdf")){
+                  url = 'https://www.iium.edu.my/imagecache/medium/iiumlogo-16by9.png';
+                }
                 if(i < 3) {
                 return( <div className="latestNews" key={item.id}>
                   <a href={item.link}>
                     <div className="card">
                             <div className="card-horizontal">
                                 <div className="img-square-wrapper col-md-5">
-                                    <img src={item.url} alt={item.title} />
+                                    <img src={url} alt={item.title} />
                                 </div>
                                 <div className="card-body col-md-7">
                                     <h5 className="card-title">{item.title}</h5>

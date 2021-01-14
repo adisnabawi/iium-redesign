@@ -53,19 +53,19 @@ class Banner extends React.Component {
               </div>
               <div className="col-md-12 hamnav">
                <ul>
-                  <li><a href="#">About IIUM</a></li>
-                  <li><a href="#">Roadmap</a></li>
-                  <li><a href="#">Admissions</a></li>
-                  <li><a href="#">Academics</a></li>
+                  <li><a href="https://www.iium.edu.my/page/about-iium">About IIUM</a></li>
+                  <li><a href="https://www.iium.edu.my/page/roadmap">Roadmap</a></li>
+                  <li><a href="https://www.iium.edu.my/page/admission-information">Admissions</a></li>
+                  <li><a href="https://www.iium.edu.my/page/academics-1">Academics</a></li>
                   <li><a href="#">FAQ</a></li>
                 </ul>
               </div>
               <div className="banleft col-md-8">
                 <ul className="menu">
-                  <li><a href="#">About IIUM</a></li>
-                  <li><a href="#">Roadmap</a></li>
-                  <li><a href="#">Admissions</a></li>
-                  <li><a href="#">Academics</a></li>
+                  <li><a href="https://www.iium.edu.my/page/about-iium">About IIUM</a></li>
+                  <li><a href="https://www.iium.edu.my/page/roadmap">Roadmap</a></li>
+                  <li><a href="https://www.iium.edu.my/page/admission-information">Admissions</a></li>
+                  <li><a href="https://www.iium.edu.my/page/academics-1">Academics</a></li>
                   <li><a href="#">FAQ</a></li>
                 </ul>
               </div>

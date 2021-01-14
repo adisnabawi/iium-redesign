@@ -3,7 +3,7 @@ class Footer extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-                  footer1:[], footer2:[]
+                  footer1:[], footer2:[], footer3:[], footer4:[]
                  };
   }
 
@@ -24,6 +24,7 @@ class Footer extends React.Component {
           });
         }
       );
+
     fetch("/json/footer/research_alumni.json")
       .then(res => res.json())
       .then(
@@ -32,6 +33,40 @@ class Footer extends React.Component {
             footer2: result
           });
           console.log(this.state.footer2);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
+
+    fetch("/json/footer/related_links.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            footer3: result
+          });
+          console.log(this.state.footer3);
+
+        },
+        (error) => {
+          this.setState({
+            error
+          });
+        }
+      );
+
+    fetch("/json/footer/others.json")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            footer4: result
+          });
+          console.log(this.state.footer4);
 
         },
         (error) => {
@@ -76,18 +111,20 @@ class Footer extends React.Component {
                 </div>
                 <div className="col-md-2">
                   <p><b>Business, Government & Related Links</b></p>
-                  <ul>
-                     <li>Test 1 </li>
-                     <li>Test 2 </li>
-                     <li>Test 3 </li>
+                  <ul className="listFooter">
+                  {this.state.footer3.map((item, i) => {
+                    return( <li><a href={item.url}> {item.title} </a> </li>
+                    )}
+                  )}
                   </ul>
                  </div>
                  <div className="col-md-2">
                    <p><b>Others</b></p>
-                   <ul>
-                      <li>Test 1 </li>
-                      <li>Test 2 </li>
-                      <li>Test 3 </li>
+                   <ul className="listFooter">
+                   {this.state.footer4.map((item, i) => {
+                     return( <li><a href={item.url}> {item.title} </a> </li>
+                     )}
+                   )}
                    </ul>
                   </div>
               </div>
