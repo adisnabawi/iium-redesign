@@ -267,9 +267,14 @@ class Announcement extends React.Component {
               <div className="col-md-8">
               {this.props.announcement.map((item, i) => {
                 var url = item.url;
-                if(url.includes(".pdf")){
+                if(url != null){
+                  if(url.includes(".jpeg") == false){
+                    url = 'https://www.iium.edu.my/imagecache/medium/iiumlogo-16by9.png';
+                  }
+                }else {
                   url = 'https://www.iium.edu.my/imagecache/medium/iiumlogo-16by9.png';
                 }
+
                 if(i < 3) {
                 return( <div className="latestNews" key={item.id}>
                   <a href={item.link}>
