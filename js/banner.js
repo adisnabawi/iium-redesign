@@ -58,6 +58,7 @@ class Banner extends React.Component {
                   <li><a href="https://www.iium.edu.my/page/admission-information">Admissions</a></li>
                   <li><a href="https://www.iium.edu.my/page/academics-1">Academics</a></li>
                   <li><a href="#">FAQ</a></li>
+                  <li><a href="https://www.iium.edu.my/contact"><i class="fa fa-phone"></i> Contact Us</a></li>
                 </ul>
               </div>
               <div className="banleft col-md-8">
@@ -67,6 +68,7 @@ class Banner extends React.Component {
                   <li><a href="https://www.iium.edu.my/page/admission-information">Admissions</a></li>
                   <li><a href="https://www.iium.edu.my/page/academics-1">Academics</a></li>
                   <li><a href="#">FAQ</a></li>
+                  <li><a href="https://www.iium.edu.my/contact" data-toggle="tooltip" title="Contact Us"><i class="fa fa-phone"></i></a></li>
                 </ul>
               </div>
               <div className="banright col-md-4">

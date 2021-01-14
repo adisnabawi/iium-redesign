@@ -46,6 +46,10 @@
     <script type="text/javascript">
       var element = document.getElementById("mainmenu");
       element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+      });
     </script>
  <script src="https://momentjs.com/downloads/moment.min.js" charset="utf-8"></script>
 </body>
