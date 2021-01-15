@@ -211,7 +211,7 @@ class News extends React.Component {
                                   </div>
                               </div>
                               <div className="card-footer iium-card-footer">
-                                  <small className="text-muted">Published on { moment(item.publishedAt).format('MMM Do YYYY')}</small>
+                                  <small className="text-muted">Published on <span className="padleft">{ moment(item.publishedAt).format('MMM Do YYYY')}</span></small>
                               </div>
                           </div>
                           <br />
@@ -235,7 +235,7 @@ class News extends React.Component {
                               <div className="card-horizontal">
                                   <div className="card-body">
                                       <small>{item.title}</small> <br />
-                                      <small className="text-muted">Published on { moment(item.publishedAt).format('MMM Do YYYY')}</small>
+                                      <small className="text-muted">Published on <span className="padleft">{ moment(item.publishedAt).format('MMM Do YYYY')} </span></small>
                                   </div>
                               </div>
                           </div>
@@ -290,7 +290,7 @@ class Announcement extends React.Component {
                                 </div>
                             </div>
                             <div className="card-footer iium-card-footer">
-                                <small className="text-muted">Published on: {item.publishedAt} </small>
+                                <small className="text-muted">Published on: <span className="padleft">{moment(item.publishedAt).format('MMM Do YYYY')} </span></small>
                             </div>
                         </div>
                         <br />
@@ -309,7 +309,7 @@ class Announcement extends React.Component {
                             <div className="card-horizontal">
                                 <div className="card-body">
                                     <small>{item.title}</small> <br />
-                                    <small className="text-muted">Published on: {item.publishedAt}</small>
+                                    <small className="text-muted">Published on: <span className="padleft">{moment(item.publishedAt).format('MMM Do YYYY')}</span></small>
                                 </div>
                             </div>
                         </div>
@@ -505,7 +505,7 @@ class Events extends React.Component {
                                       <hr className="iium-line iu-left"></hr>
                                       <br />
                                       <p>{ moment(item.start_date).format('MMM Do YYYY')} -
-                                      { moment(item.end_date).format('MMM Do YYYY')}</p>
+                                      <span className="padleft">{ moment(item.end_date).format('MMM Do YYYY')}</span></p>
                                   </div>
                               </div>
                               <div className="card-footer iium-card-footer">

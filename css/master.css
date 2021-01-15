@@ -411,5 +411,8 @@
     transform: translateX(-66.6666%);
   }
 }
+.padleft {
+  padding-left: 3px;
+}
 
 /*# sourceMappingURL=master.css.map */
