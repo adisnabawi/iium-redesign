@@ -174,7 +174,7 @@ class Menu extends React.Component {
                    <button className={this.state.showMenu == 'student' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('student')}>Students</button>
                    <button className={this.state.showMenu == 'alumni' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('alumni')}>Alumni</button>
                    <button className={this.state.showMenu == 'research' ? 'btn btn-iium btninfo btn-active' : 'btn btn-iium btninfo'} onClick={this.handleClick('research')}>Research</button>
-                   <button className='btn btn-iium btninfo btn-active'>Video</button>
+                   <button className='btn btn-iium btninfo'>Video</button>
                 </div>
                <div className="col-md-9 content">
                 {this.renderSwitch(this.state.showMenu)}
